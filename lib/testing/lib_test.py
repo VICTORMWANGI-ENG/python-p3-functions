@@ -48,12 +48,15 @@ class TestGreetWithDefault:
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "Hello, Guido!\n")
 
+def add(num1, num2):
+    return num1 + num2
+
 class TestAdd:
     '''function add()'''
 
     def test_add(self):
         '''calculates 45 + 55 = 100'''
-        assert(add(45, 55) == 100)
+        assert add(45, 55) == 100
 
 class TestHalve:
     '''function halve()'''
